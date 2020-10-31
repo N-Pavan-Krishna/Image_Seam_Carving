@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D03624A254CFE5700203DC1 /* sc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D036249254CFE5700203DC1 /* sc.cpp */; };
 		5D876E72254CEB6400D772B8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D876E71254CEB6400D772B8 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D036248254CFE1100203DC1 /* sc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sc.h; sourceTree = "<group>"; };
+		5D036249254CFE5700203DC1 /* sc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sc.cpp; sourceTree = "<group>"; };
 		5D876E6E254CEB6400D772B8 /* Image_Seam_Carving */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Image_Seam_Carving; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D876E71254CEB6400D772B8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				5D876E71254CEB6400D772B8 /* main.cpp */,
+				5D036248254CFE1100203DC1 /* sc.h */,
+				5D036249254CFE5700203DC1 /* sc.cpp */,
 			);
 			path = Image_Seam_Carving;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D876E72254CEB6400D772B8 /* main.cpp in Sources */,
+				5D03624A254CFE5700203DC1 /* sc.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +246,32 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = "/usr/local/Cellar/opencv@2/2.4.13.7_11/include";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "/usr/local/Cellar/opencv@2/2.4.13.7_11/lib";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-I/usr/local/Cellar/opencv@2/2.4.13.7_11/include/opencv",
+					"-I/usr/local/Cellar/opencv@2/2.4.13.7_11/include",
+					"-L/usr/local/Cellar/opencv@2/2.4.13.7_11/lib",
+					"-lopencv_calib3d",
+					"-lopencv_contrib",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_gpu",
+					"-lopencv_highgui",
+					"-lopencv_imgproc",
+					"-lopencv_legacy",
+					"-lopencv_ml",
+					"-lopencv_nonfree",
+					"-lopencv_objdetect",
+					"-lopencv_ocl",
+					"-lopencv_photo",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videostab",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
